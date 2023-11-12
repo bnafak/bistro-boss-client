@@ -1,9 +1,5 @@
 import SectionTitle from "../../components/SectionTitle";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { Rating } from "@smastrom/react-rating";
@@ -30,22 +26,23 @@ const Testimonial = () => {
         subHeading="What Our Client Say"
         heading={"Testimonial"}
       ></SectionTitle>
-      {reviews.length}
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        {reviews.map((review) => (
-          <SwiperSlide key={review._id}>
-            <div className="flex-cols items-center m-24">
-              <Rating
-                style={{ maxWidth: 180 }}
-                value={review.rating}
-                onChange={setRating}
-              />
 
-              <p> {review.details}</p>
-              <h3 className="text-orange-400 text-2xl"> {review.name}</h3>
-            </div>
-          </SwiperSlide>
-        ))}
+      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        {
+         reviews.map(review => <SwiperSlide
+          key={review._id}
+      >
+          <div className="flex flex-col items-center mx-24 my-16">
+              <Rating
+                  style={{ maxWidth: 180 }}
+                  value={review.rating}
+                  readOnly
+              />
+              <p className="py-8">{review.recipe}</p>
+              <h3 className="text-xl text-orange-400">{review.name}</h3>
+          </div>
+      </SwiperSlide>)
+        }
       </Swiper>
     </section>
   );
