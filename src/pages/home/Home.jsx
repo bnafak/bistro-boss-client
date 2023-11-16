@@ -8,6 +8,7 @@ import Testimonial from "./Testimonial";
 const Home = () => {
   return (
     <div>
+      <h1 className="text-center text-red-600 text-3xl">Video duration : Module: 65-6, 7 minute</h1>
       <Helmet>
         <title>Bistro Boss | Home</title>
       </Helmet>

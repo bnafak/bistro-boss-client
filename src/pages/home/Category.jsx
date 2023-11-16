@@ -34,11 +34,7 @@ const Category = () => {
           <img src={slide4} alt="" />
           <h3 className="text-4xl text-center text-white -mt-20">DESERT</h3>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide4} alt="" />
-          <h3 className="text-4xl text-center text-white -mt-20">DESERT</h3>
-        </SwiperSlide>
-        <SwiperSlide>
+               <SwiperSlide>
           <img src={slide2} alt="" />
           <h3 className="text-4xl text-center text-white -mt-20">SALAD</h3>
         </SwiperSlide>
@@ -46,10 +42,7 @@ const Category = () => {
           <img src={slide3} alt="" />
           <h3 className="text-4xl text-center text-white -mt-20">SOUP</h3>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide4} alt="" />
-          <h3 className="text-4xl text-center text-white -mt-20">DESERT</h3>
-        </SwiperSlide>
+    
         <SwiperSlide>
           <img src={slide5} alt="" />
           <h3 className="text-4xl text-center text-white -mt-20">SALAD</h3>

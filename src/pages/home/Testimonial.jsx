@@ -15,7 +15,7 @@ const Testimonial = () => {
   const [rating, setRating] = useState(3);
 
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -24,7 +24,7 @@ const Testimonial = () => {
     <section className="my-20">
       <SectionTitle
         subHeading="What Our Client Say"
-        heading={"Testimonial"}
+        heading="Testimonial"
       ></SectionTitle>
 
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
